@@ -1,79 +1,138 @@
+/* Theme variables are defined in darkmode_toggle.css */
+/* Additional theme variables for the App */
+:root[data-theme="light"] {
+  --app-bg-primary: #ffffff;
+  --app-bg-secondary: #f8f9fa;
+  --app-header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --app-text-primary: #2c3e50;
+  --app-text-secondary: #6c757d;
+  --app-accent: #667eea;
+  --app-accent-hover: #5a67d8;
+  --app-danger: #e53e3e;
+  --app-danger-hover: #c53030;
+  --app-border: #e2e8f0;
+  --app-shadow: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --app-bg-primary: #1a202c;
+  --app-bg-secondary: #2d3748;
+  --app-header-bg: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+  --app-text-primary: #f7fafc;
+  --app-text-secondary: #a0aec0;
+  --app-accent: #63b3ed;
+  --app-accent-hover: #4299e1;
+  --app-danger: #fc8181;
+  --app-danger-hover: #f56565;
+  --app-border: #4a5568;
+  --app-shadow: rgba(0, 0, 0, 0.3);
+}
+
 .App {
   text-align: center;
+  background-color: var(--app-bg-primary);
+  color: var(--app-text-primary);
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .App-header {
-  background-color: #282c34;
+  background: var(--app-header-bg);
   padding: 20px;
-  color: white;
+  color: var(--app-text-primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  transition: background 0.3s ease;
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--app-accent);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .App-link:hover {
+  color: var(--app-accent-hover);
   text-decoration: underline;
 }
 
 .counter-section {
   margin: 30px 0;
   padding: 20px;
-  border: 2px solid #61dafb;
-  border-radius: 10px;
-  background-color: rgba(97, 218, 251, 0.1);
+  border: 2px solid var(--app-accent);
+  border-radius: 12px;
+  background-color: var(--app-bg-secondary);
+  box-shadow: 0 4px 6px var(--app-shadow);
+  transition: all 0.3s ease;
+}
+
+.counter-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px var(--app-shadow);
 }
 
 .counter-button, .reset-button {
-  background-color: #61dafb;
+  background-color: var(--app-accent);
   border: none;
-  color: #282c34;
-  padding: 10px 20px;
+  color: var(--app-bg-primary);
+  padding: 12px 24px;
   margin: 0 10px;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--app-shadow);
 }
 
 .counter-button:hover {
-  background-color: #4fa8c5;
+  background-color: var(--app-accent-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--app-shadow);
+}
+
+.counter-button:active {
+  transform: translateY(0);
 }
 
 .reset-button {
-  background-color: #ff6b6b;
-  color: white;
+  background-color: var(--app-danger);
+  color: var(--app-text-primary);
 }
 
 .reset-button:hover {
-  background-color: #ff5252;
+  background-color: var(--app-danger-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px var(--app-shadow);
 }
 
 .info-section {
   margin-top: 30px;
   font-size: 18px;
+  color: var(--app-text-secondary);
 }
 
 .info-section h2 {
-  color: #61dafb;
+  color: var(--app-accent);
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .info-section p {
-  margin: 10px 0;
+  margin: 15px 0;
+  line-height: 1.6;
 }
 
 code {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 2px 6px;
-  border-radius: 3px;
+  background-color: var(--app-bg-secondary);
+  color: var(--app-accent);
+  padding: 4px 8px;
+  border-radius: 4px;
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.9em;
+  border: 1px solid var(--app-border);
 }

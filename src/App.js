@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import DarkModeToggle from './darkmode_toggle';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <DarkModeToggle />
         <h1>Welcome to React!</h1>
         <p>This is a basic React application.</p>
         
