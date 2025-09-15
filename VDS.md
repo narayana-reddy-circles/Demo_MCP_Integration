@@ -319,3 +319,19 @@ Copy these exact phrases to use during recording:
 ```
 
 Good luck with your recording! 🎬✨
+
+---
+
+## 🎨 Additional Tool Reference: Figma Integration
+
+**Note for Future Demos:**
+
+We also have a Figma tool which can help eliminate styling issues when working with UI changes. This tool can directly fetch styles along with all properties from Figma designs. Unfortunately, I haven't added it to our today's demo as it requires a token along with the Figma mock design, but I wanted to add it here for reference.
+
+The Figma integration would allow the AI to:
+- Extract design specifications directly from Figma files
+- Generate CSS with exact colors, fonts, and spacing from designs
+- Ensure pixel-perfect implementation of UI components
+- Maintain design system consistency across the codebase
+
+This tool bridges the gap between design and development, making the AI not just a code generator, but a design-to-code translator that maintains visual fidelity throughout the development process.
