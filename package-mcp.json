@@ -1,0 +1,17 @@
+{
+  "name": "trello-mcp-demo",
+  "version": "1.0.0",
+  "description": "Custom MCP server for Trello and Zapier integration demo",
+  "type": "module",
+  "main": "trello-mcp-server.js",
+  "scripts": {
+    "start": "node trello-mcp-server.js",
+    "install-mcp": "npm install @modelcontextprotocol/sdk"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
